@@ -38,7 +38,7 @@ function App() {
         <div className="App">
             <h1>Stopwatch</h1>
             <p>
-                Time : <span>{formatTime(time)}</span>
+                Time: <span>{formatTime(time)}</span>
             </p>
             <div className="button-container">
                 <button onClick={() => handleClick()}>
