@@ -9,7 +9,7 @@ function App() {
         let intervalId;
         if (isStarted) {
             intervalId = setInterval(() => {
-                setTime((prev) => prev + 1000);
+                setTime((prev) => prev + 1);
             }, 1000);
         } else {
             clearInterval(intervalId);
@@ -24,10 +24,9 @@ function App() {
         setTime(0);
     };
 
-    const formatTime = (ms) => {
-        const seconds = Math.floor(ms / 1000);
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
+    const formatTime = (sec) => {
+        const minutes = Math.floor(sec / 60);
+        const remainingSeconds = sec % 60;
 
         return `${minutes.toString().padStart(1, "0")}:${remainingSeconds
             .toString()
